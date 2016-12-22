@@ -2,10 +2,10 @@ from nose.tools import *
 import NAME
 
 def setup() :
-    print "SETUP!"
+    print "####### Starting tests on BUBBLE SORTS"
 
 def teardown() :
-    print "TEAR DOWN!"
+    print "####### Ending tests on BUBBLE SORTS"
 
 def test_basic() :
     print "I RAN!"
