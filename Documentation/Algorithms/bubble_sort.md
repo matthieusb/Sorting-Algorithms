@@ -1,5 +1,5 @@
 # Bubble sort explained
-Bubble sort is one of the simplest algorithms
+Bubble sort is one of the simplest sorting algorithms
 
 
 ## Algorithm
@@ -45,7 +45,6 @@ i is an int
 swapped_flag is a boolean
 
 -- ALGORITHM
-
 for i = 0 to arraySize - 1
   swapped_flag = false
   for j = 0 to arraySize - 1
@@ -65,3 +64,4 @@ end for
 
 ## Complexity
 The bubble sort algorithm is *O(n²)* (where n is the array length, as usual) since it has to go through the table with two loops.
+At best, complexity is *o(n)*

@@ -4,16 +4,16 @@ except ImportError :
     from distutils.core import setup
 
 config = {
-    'description' : 'My project',
+    'description' : 'Sorting Algorithms project',
     'author' : 'Matthieu Sauboua-Beneluz',
-    'url': 'http://nowhere.com',
-    'download_url': 'http://stillnowhere.com',
-    'author_email': 'python_test@test.com',
+    'url': 'https://github.com/matthieusb/Sorting-Algorithms',
+    'download_url': 'https://github.com/matthieusb/Sorting-Algorithms',
+    #'author_email': '',
     'version': '0.1',
-    'install_requires': ['nose'],
-    'packages': ['NAME'],
+    'install_requires': ['nose', 'rednose'],
+    'packages': ['src'],
     'scripts': [],
-    'name': 'projectname'
+    'name': 'sortingalgorithms'
 }
 
 setup(**config)
