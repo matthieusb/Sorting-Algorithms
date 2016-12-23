@@ -32,3 +32,4 @@ __Better version of the algorithm :__
 ```
 
 ## Complexity
+Two loops with a nested one means *O(n²)* complexity at worst. At best it is *O(n)* with an already sorted array, as it only has to go through it once.
