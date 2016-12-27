@@ -1,5 +1,5 @@
 from nose.tools import *
-import NAME
+import sorting
 
 def setup() :
     print "####### Starting tests on GENERAL elements"
