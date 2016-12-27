@@ -1,5 +1,6 @@
 # Sorting-Algorithms
-This repository implements well known sorting algorithms. It's the occasion to practise some basic algorithmic notions and language specificities. This is just training.
+This repository implements well known sorting algorithms. It's the occasion to practise some basic algorithmic notions and language specificities. This is just for training purposes.
+
 
 ## Algorithms implemented
 The project should implement the following sorting alogrithms :
