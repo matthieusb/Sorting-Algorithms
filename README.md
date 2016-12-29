@@ -23,7 +23,7 @@ Some interesting languages to use would be the following :
   - C#
 
 ## Links used :
-I went through a bit of documentation to implement these algorithms. See the *Documentation/Algorithms* file so that
+I went through a bit of documentation to implement these algorithms. See the *Documentation/Algorithms* for details
 
   - With schemas and explanations : [Tutorials point](https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_algorithm.htm)
   - With animations for each sort according to sample types [Top tals](https://www.toptal.com/developers/sorting-algorithms)
