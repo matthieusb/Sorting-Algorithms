@@ -3,6 +3,7 @@ This repository implements well known sorting algorithms. It's the occasion to p
 
 
 ## Algorithms implemented
+----
 The project should implement the following sorting alogrithms :
 
   - Bubble sort
@@ -22,7 +23,17 @@ Some interesting languages to use would be the following :
   - *C++*
   - C#
 
+## Running it
+----
+TODO
+
+
+
+### Python version
+This project has been developed using python 2.7.12 on Ubuntu 16.04.
+
 ## Links used :
+----
 I went through a bit of documentation to implement these algorithms. See the *Documentation/Algorithms* for details
 
   - With schemas and explanations : [Tutorials point](https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_algorithm.htm)
