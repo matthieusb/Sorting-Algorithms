@@ -21,6 +21,8 @@ Just use the tutorial set up in seanfisk github repository, it's well explained,
   - [mock](http://www.voidspace.org.uk/python/mock/) for mocking (not required by the template, but included anyway)
   - [tox](http://testrun.org/tox/latest/) for testing on multiple Python versions
 
+#### Where to go  
+
 ### Virtualenv and install
 
 This is used to isolate the python for the project. This is not mandatory, just good practice
@@ -43,7 +45,7 @@ deactivate
 ```
 
 
-Then, install the requirements :
+Then, when activated, install the requirements :
 
 ```
 pip install -r requirements-dev.txt
