@@ -77,3 +77,9 @@ If you want to change some *paver* commands, go to the *setup.py* file
 
 
 For more information, ask for help : ```paver help```
+
+## Troubleshooting
+----
+
+### Import problem
+Having an error like "Can'it import metadata" in setup.py, try removing *.pyc* files and try again
