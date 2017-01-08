@@ -38,7 +38,7 @@ sys.path.insert(0, os.path.abspath('.'))
 CODE_DIRECTORY = 'sorting_algo'
 DOCS_DIRECTORY = 'docs'
 TESTS_DIRECTORY = 'tests'
-PYTEST_FLAGS = ['--doctest-modules', '-s']
+PYTEST_FLAGS = ['--doctest-modules', '-s', '-v']
 
 # Import metadata. Normally this would just be:
 #
