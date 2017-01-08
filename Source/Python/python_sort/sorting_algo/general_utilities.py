@@ -3,6 +3,28 @@
 import random
 
 
+def swap_list_elements(listTo, idx1, idx2):
+    """Swap two elements of a list. Returns a boolean to notify swap success or not
+
+    :param listTo: The list to swap
+    :type listTo: :class:`list`
+    :param idx1: The index of the first element to swap
+    :type idx1: :class:`int`
+    :param idx2: The index of the second element to swap
+    :type idx2: :class:`int`
+    """
+
+    if listTo and idx1 >= 0 and idx2 >= 0:
+        length = len(listTo)
+        if idx1 < length and idx2 < length:
+            listTo[idx1], listTo[idx2] = listTo[idx2], listTo[idx1]
+            return True
+        else:
+            return False
+    else:
+        return False
+
+
 def is_list_sorted(listToCheck, operator):
     """Check if a list is sorted according to an operator.
     Returns False if the list is empty

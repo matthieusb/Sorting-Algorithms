@@ -70,3 +70,19 @@ class TestGenerateRandomList(object):
                     assert len(resultList) == length
                     assert all(minTest<=x<=maxTest for x in resultList)
                     assert general_utilities.is_list_sorted(resultList, operator.le)
+
+
+class TestSwapElements(object):
+    listToSwap = [1, 2, 3, 4]
+
+    def test_is_correctly_swapped(self):
+        assert general_utilities.swap_list_elements(self.listToSwap, 0, 1)
+        assert self.listToSwap[0] == 2 and self.listToSwap[1] == 1
+
+    # Test all cases where function might be called incorrectly
+    def test_incorrect_swap_params(self):
+        assert not general_utilities.swap_list_elements([], 0, 1)
+
+        assert not general_utilities.swap_list_elements(self.listToSwap, -1, 10)
+
+        assert not general_utilities.swap_list_elements(self.listToSwap, 1, 10)
