@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 from pytest import raises
 
+from sorting_algo import metadata
+from sorting_algo.main import main
+
 # The parametrize function is generated, so this doesn't work:
 #
 #     from pytest.mark import parametrize
 #
 import pytest
 parametrize = pytest.mark.parametrize
-
-from sorting_algo import metadata
-from sorting_algo.main import main
 
 
 class TestMain(object):

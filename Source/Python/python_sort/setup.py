@@ -6,7 +6,11 @@ import sys
 import imp
 import subprocess
 
-## Python 2.6 subprocess.check_output compatibility. Thanks Greg Hewgill!
+from setuptools import setup, find_packages
+from setuptools.command.test import test as TestCommand
+from distutils import spawn
+
+# Python 2.6 subprocess.check_output compatibility. Thanks Greg Hewgill!
 if 'check_output' not in dir(subprocess):
     def check_output(cmd_args, *args, **kwargs):
         proc = subprocess.Popen(
@@ -17,10 +21,6 @@ if 'check_output' not in dir(subprocess):
             raise subprocess.CalledProcessError(args)
         return out
     subprocess.check_output = check_output
-
-from setuptools import setup, find_packages
-from setuptools.command.test import test as TestCommand
-from distutils import spawn
 
 try:
     import colorama
@@ -34,11 +34,11 @@ except ImportError:
 # Add the current directory to the module search path.
 sys.path.insert(0, os.path.abspath('.'))
 
-## Constants
+# Constants
 CODE_DIRECTORY = 'sorting_algo'
 DOCS_DIRECTORY = 'docs'
 TESTS_DIRECTORY = 'tests'
-PYTEST_FLAGS = ['--doctest-modules']
+PYTEST_FLAGS = ['--doctest-modules', '-s']
 
 # Import metadata. Normally this would just be:
 #
@@ -55,7 +55,7 @@ metadata = imp.load_source(
     'metadata', os.path.join(CODE_DIRECTORY, 'metadata.py'))
 
 
-## Miscellaneous helper functions
+# Miscellaneous helper functions
 
 def get_project_files():
     """Retrieve a list of project files, ignoring hidden files.
@@ -181,7 +181,7 @@ def _test():
     :return: exit code
     """
     # Make sure to import pytest in this function. For the reason, see here:
-    # <http://pytest.org/latest/goodpractises.html#integration-with-setuptools-test-commands>  # NOPEP8
+    # <http://pytest.org/latest/goodpractises.html#integration-with-setuptools-test-commands>  # noqa: E501
     import pytest
     # This runs the unit tests.
     # It also runs doctest, but only on the modules in TESTS_DIRECTORY.
@@ -201,7 +201,7 @@ def _test_all():
 # Setuptools' automatic run of 2to3 on the source code. The recommended way to
 # run tests is still `paver test_all'.
 # See <http://pythonhosted.org/setuptools/python3.html>
-# Code based on <http://pytest.org/latest/goodpractises.html#integration-with-setuptools-test-commands>  # NOPEP8
+# Code based on <http://pytest.org/latest/goodpractises.html#integration-with-setuptools-test-commands>  # noqa: E501
 class TestAllCommand(TestCommand):
     def finalize_options(self):
         TestCommand.finalize_options(self)
@@ -221,9 +221,6 @@ python_version_specific_requires = []
 if sys.version_info < (2, 7) or (3, 0) <= sys.version_info < (3, 3):
     python_version_specific_requires.append('argparse')
 
-# Defining the path of devtools detailed explanation
-devtools_file_path = '../../../Documentation/ProjectDevelopment/DevTools.md'
-
 # See here for more options:
 # <http://pythonhosted.org/setuptools/setuptools.html>
 setup_dict = dict(
@@ -235,7 +232,7 @@ setup_dict = dict(
     maintainer_email=metadata.emails[0],
     url=metadata.url,
     description=metadata.description,
-    long_description=read(devtools_file_path),
+    long_description=read('../../../Documentation/ProjectDevelopment/DevTools_Python.md'),  # flake8:noqa: e501
     # Find a list of classifiers here:
     # <http://pypi.python.org/pypi?%3Aaction=list_classifiers>
     classifiers=[

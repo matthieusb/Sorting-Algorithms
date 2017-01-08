@@ -3,15 +3,16 @@
 
 # Testing
 pytest==3.0.5
-pytest-cov==2.4.0
+#pytest-cov==2.4.0
 py==1.4.19
 mock==1.0.1
 
 # Linting
-flake8==2.1.0
-mccabe==0.2.1
+flake8==3.2.1
+mccabe==0.5.3
 pep8==1.4.6
-pyflakes==0.7.3
+pyflakes==1.4.0
+pycodestyle==2.2.0
 
 # Documentation
 Sphinx==1.2
