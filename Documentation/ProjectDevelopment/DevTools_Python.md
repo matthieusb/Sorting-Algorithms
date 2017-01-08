@@ -78,6 +78,9 @@ If you want to change some *paver* commands, go to the *setup.py* file
 
 For more information, ask for help : ```paver help```
 
+### Documentation
+For now, just go to the *docs/source/README* file and follow instructions
+
 ## Troubleshooting
 ----
 

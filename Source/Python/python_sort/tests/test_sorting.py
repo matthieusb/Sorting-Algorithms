@@ -4,5 +4,6 @@
 class TestBubbleSort(object):
     pass
 
+
 class TestInsertionSort(object):
     pass
