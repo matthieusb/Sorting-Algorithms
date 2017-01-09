@@ -31,7 +31,7 @@ def is_list_sorted(listToCheck, operator):
 
     :param listToCheck: The list to check
     :type listToCheck: :class:`list`
-    :param operator: The sorted order to check
+    :param operator: operator.le for asc, operator.ge for desc
     :type operator: :class:`operator`
     """
     if not listToCheck:
@@ -76,7 +76,7 @@ def generate_random_int_list_sorted(size, min, max, operator):
     :type min: :class:`int`
     :param max: Maximum integer to randomly generate (Included)
     :type max: :class:`int`
-    :param operator: operator.ge for asc, operator.le for desc
+    :param operator: operator.le for asc, operator.ge for desc
     :type operator: :class:`operator`
     """
     if size == 0 or min > max:

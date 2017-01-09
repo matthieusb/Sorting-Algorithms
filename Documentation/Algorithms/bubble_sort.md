@@ -49,8 +49,8 @@ for i = 0 to arraySize - 1
   swapped_flag = false
   for j = 0 to arraySize - 1
 
-    if array[i] < array[i + 1] then
-      swap(array, i, i + 1)
+    if array[j] < array[j + 1] then
+      swap(array, j, j + 1)
       swapped = true # Not a tautology, we want it to keep its true value until the end of the current loop
     end if
   end for
