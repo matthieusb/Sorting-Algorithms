@@ -1,6 +1,6 @@
 # Bubble sort explained
-Bubble sort is one of the simplest sorting algorithms
-
+Bubble sort is one of the simplest sorting algorithms.
+You just iterate through each array tile and determine wether the current element is inferior/superior to the following, and you swap them according to the order you want, until the list is sorted
 
 ## Algorithm
 __Naive version of the algorithm :__

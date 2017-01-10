@@ -1,9 +1,15 @@
 # Insertion sort explained
 
+Insertion sort follows this process :
+  - First element of the list means it's sorted, so you return the list
+  - Go to the next element
+  - Compare with all elements in sorted sublist
+  - Put the current element at the good place in the sublist
+  - As usual, repeat until the list is sorted
 
+In this case you actually generate a new list as you go on, you don't change the list you send
 
 ## Algorithm
-__Naive version of the algorithm :__
 ```
 -- FUNCTIONS
 
@@ -12,22 +18,6 @@ __Naive version of the algorithm :__
 
 
 -- ALGORITHM
-
-```
-
-**IMPORTANT** :
-
-__Better version of the algorithm :__
-
-```
--- FUNCTIONS
-
-
--- VARIABLES
-
-
--- ALGORITHM
-
 
 ```
 

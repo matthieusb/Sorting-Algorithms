@@ -23,7 +23,7 @@ def bubble_sort(listToSort, operator):
                 general_utilities.swap_list_elements(listToSort, j, j + 1)
                 swappedFlag = True
             j = j + 1
-    i = i + 1
+        i = i + 1
 
 
 def insertion_sort(list, operator):
