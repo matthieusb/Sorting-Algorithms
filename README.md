@@ -4,7 +4,7 @@ This repository implements well known sorting algorithms. It's the occasion to p
 
 ## Algorithms implemented
 ----
-The project should implement the following sorting alogrithms :
+The project should implement the following sorting algorithms :
 
   - Bubble sort
   - Insertion sort
@@ -15,18 +15,17 @@ The project should implement the following sorting alogrithms :
   - Quick sort
   - (Quick3 sort)
 
-## Languages used
-Some interesting languages to use would be the following :
-  - **Python** : current language
-  - *Java*
-  - C
-  - *C++*
-  - C#
+The main programming is Python, it would be interesting to compare performance with other languages like Java or C++
 
 ## Running it
 ----
-TODO
+For now, following these steps :
 
+  - Go to *Source/Python* and type ```source venv/bin/activate```
+  - Then go to the *python_sort* folder and type ```paver test_all```, this will run all syntax and unit tests
+  - If the previous stepped returned full green on unit tests, run the app with : ```paver run```
+
+For now, I still have to implement the argument handling
 
 
 ### Python version

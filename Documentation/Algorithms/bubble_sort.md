@@ -29,7 +29,7 @@ end while
 ```
 
 **IMPORTANT** :
-There is another way to check if everything is sorted : add a *swap* flag as a boolean. If nothing was swapped while ou go through the list, it's ok to stop.
+There is another way to check if everything is sorted : add a *swap* flag as a boolean. If nothing was swapped while you go through the list, it's ok to stop.
 
 __Better version of the algorithm :__
 

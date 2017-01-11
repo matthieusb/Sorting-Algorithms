@@ -11,13 +11,32 @@ In this case you actually generate a new list as you go on, you don't change the
 
 ## Algorithm
 ```
--- FUNCTIONS
-
-
 -- VARIABLES
-
+array is an array of int (For this example)
+arraySize is an int
+i is an int
+indexToInsert is an int
+valueToInsert is an int
 
 -- ALGORITHM
+arraySize = length(array)
+
+for i = 0 to arraySize
+  valueToInsert = array[i]
+  indexToInsert = i
+
+
+  while indexToInsert > 0 and array[indexToInsert - 1] > valueToInsert
+    array[indexToInsert] = array[indexToInsert - 1]
+    indexToInsert--
+  end while
+
+  array[indexToInsert] = valueToInsert
+
+end for
+
+
+
 
 ```
 
