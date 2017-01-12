@@ -1,5 +1,5 @@
 # Sorting-Algorithms
-This repository implements well known sorting algorithms. It's the occasion to practise some basic algorithmic notions and language specificities. This is just for training purposes.
+This repository implements well known sorting algorithms. It's the occasion to practise some basic algorithmic notions and language specificities. This is just for training purposes, as the algorithms are well known and already implemented on most languages. I wanted to develop a simple Python project to practise the basic notions I had already learnt. 
 
 
 ## Algorithms implemented
@@ -15,7 +15,7 @@ The project should implement the following sorting algorithms :
   - Quick sort
   - (Quick3 sort)
 
-The main programming is Python, it would be interesting to compare performance with other languages like Java or C++
+The main programming language is Python, it would be interesting to compare performance with other languages like Java or C++.
 
 ## Running it
 ----
