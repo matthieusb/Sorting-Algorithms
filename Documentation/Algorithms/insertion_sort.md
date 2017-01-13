@@ -25,7 +25,6 @@ for i = 0 to arraySize
   valueToInsert = array[i]
   indexToInsert = i
 
-
   while indexToInsert > 0 and array[indexToInsert - 1] > valueToInsert
     array[indexToInsert] = array[indexToInsert - 1]
     indexToInsert--
