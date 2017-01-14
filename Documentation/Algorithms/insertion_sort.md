@@ -7,8 +7,6 @@ Insertion sort follows this process :
   - Put the current element at the good place in the sublist
   - As usual, repeat until the list is sorted
 
-In this case you actually generate a new list as you go on, you don't change the list you send
-
 ## Algorithm
 ```
 -- VARIABLES

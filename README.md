@@ -1,5 +1,5 @@
 # Sorting-Algorithms
-This repository implements well known sorting algorithms. It's the occasion to practise some basic algorithmic notions and language specificities. This is just for training purposes, as the algorithms are well known and already implemented on most languages. I wanted to develop a simple Python project to practise the basic notions I had already learnt. 
+This repository implements well known sorting algorithms. It's the occasion to practise some basic algorithmic notions and language specificities. This is just for training purposes, as the algorithms are well known and already implemented on most languages. I wanted to develop a simple Python project to practise the basic notions I had already learnt.
 
 
 ## Algorithms implemented
@@ -10,10 +10,8 @@ The project should implement the following sorting algorithms :
   - Insertion sort
   - Selection sort
   - Merge sort
-  - (Heap sort)
   - Shell sort
   - Quick sort
-  - (Quick3 sort)
 
 The main programming language is Python, it would be interesting to compare performance with other languages like Java or C++.
 
@@ -35,5 +33,5 @@ This project has been developed using python 2.7.12 on Ubuntu 16.04.
 ----
 I went through a bit of documentation to implement these algorithms. See the *Documentation/Algorithms* for details
 
-  - With schemas and explanations : [Tutorials point](https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_algorithm.htm)
+  - With schemas and explanations (I checked the algorithms used on this site) : [Tutorials point](https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_algorithm.htm)
   - With animations for each sort according to sample types [Top tals](https://www.toptal.com/developers/sorting-algorithms)
