@@ -2,7 +2,7 @@
 
 General documentation for python : [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/)
 
-**TUTORIAL USED** Tutorial with project template : [Github tempalte with instructions](https://github.com/seanfisk/python-project-template)
+**TUTORIAL USED** Tutorial with project template : [Github template with instructions](https://github.com/seanfisk/python-project-template)
 
 ## Project setup
 ----
@@ -58,7 +58,7 @@ paver test_all
 
 ### Testing
 
-Unit tests can be laucnhed with this :
+Unit tests can be launched with this :
 ```
 paver test
 ```
@@ -85,4 +85,4 @@ For now, just go to the *docs/source/README* file and follow instructions
 ----
 
 ### Import problem
-Having an error like "Can'it import metadata" in setup.py, try removing *.pyc* files and try again
+Having an error like "Can't import metadata" in setup.py, try removing *.pyc* files and try again
