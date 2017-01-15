@@ -7,7 +7,7 @@ def bubble_sort(listToSort, operator):
     """Sorts the given list using bubble algorithm and given operator.
     Returns a list
 
-    :param listToSort: The list to check
+    :param listToSort: The list to sort
     :type listToSort: :class:`list`
     :param operator: operator.le for asc, operator.ge for desc
     :type operator: :class:`operator`
@@ -38,7 +38,7 @@ def insertion_sort(listToSort, operator):
     """Sorts the given list using insertion algorithm and given operator.
     Returns a list
 
-    :param listToSort: The list to check
+    :param listToSort: The list to sort
     :type listToSort: :class:`list`
     :param operator: operator.le for asc, operator.ge for desc
     :type operator: :class:`operator`
@@ -70,7 +70,7 @@ def selection_sort(listToSort, operator):
     """Sorts the given list using selection algorithm and given operator.
     Returns a list
 
-    :param listToSort: The list to check
+    :param listToSort: The list to sort
     :type listToSort: :class:`list`
     :param operator: operator.le for asc, operator.ge for desc
     :type operator: :class:`operator`
@@ -98,6 +98,14 @@ def selection_sort(listToSort, operator):
 
 
 def merge_sort(listToSort, operator):
+    """Sorts the given list using merge algorithm and given operator.
+    Returns a list
+
+    :param listToSort: The list to sort
+    :type listToSort: :class:`list`
+    :param operator: operator.le for asc, operator.ge for desc
+    :type operator: :class:`operator`
+    """
     if listToSort:
         return merge_do_algo(listToSort, operator)
     else:
@@ -105,6 +113,14 @@ def merge_sort(listToSort, operator):
 
 
 def merge_do_algo(listToSort, operator):
+    """Splits lists into 2 and launch merge algorithm on two list halves
+    Returns a list (Recursive function)
+
+    :param listToSort: The list you wish to sort
+    :type listToSort: :class:`list`
+    :param operator: operator.le for asc, operator.ge for desc
+    :type operator: :class:`operator`
+    """
     listSize = len(listToSort)
 
     if listSize == 1:
@@ -120,6 +136,16 @@ def merge_do_algo(listToSort, operator):
 
 
 def merge_list_halves(listOne, listTwo, operator):
+    """Merges two lists according to operator sorting order
+    Returns a list
+
+    :param listOne: The first list to merge
+    :type listOne: :class:`list`
+    :param listTwo: The sconde list to merge
+    :type listTwo: :class:`list`
+    :param operator: operator.le for asc, operator.ge for desc
+    :type operator: :class:`operator`
+    """
     listResult = []
 
     while (listOne and listTwo):
