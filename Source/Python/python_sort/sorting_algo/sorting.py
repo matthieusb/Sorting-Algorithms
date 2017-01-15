@@ -166,8 +166,125 @@ def merge_list_halves(listOne, listTwo, operator):
 
 
 def shell_sort(listToSort, operator):
-    return[]
+    """Sorts the given list using shell algorithm and given operator.
+    Returns a list
+
+    :param listToSort: The list to sort
+    :type listToSort: :class:`list`
+    :param operator: operator.le for asc, operator.ge for desc
+    :type operator: :class:`operator`
+    """
+    if listToSort:
+        listResult = list(listToSort)
+        interval = 1
+        listLength = len(listResult)
+        listLengthDiv3 = listLength / 3
+
+        # Initializing knuth's interval
+        while interval < listLengthDiv3:
+            interval = interval * 3 + 1
+
+        while interval > 0:
+            for outer in range(interval, listLength):
+                valueToInsert = listResult[outer]
+                inner = outer
+
+                while (
+                    inner > interval - 1 and
+                    operator(valueToInsert, listResult[inner - interval])
+                ):
+                    listResult[inner] = listResult[inner - interval]
+                    inner = inner - interval
+
+                listResult[inner] = valueToInsert
+            interval = (interval - 1) / 3
+        return listResult
+    else:
+        return []
 
 
 def quick_sort(listToSort, operator):
-    return[]
+    """Sorts the given list using quicksort algorithm and given operator.
+    Returns a list
+
+    :param listToSort: The list to sort
+    :type listToSort: :class:`list`
+    :param operator: operator.le for asc, operator.ge for desc
+    :type operator: :class:`operator`
+    """
+    if listToSort:
+        listResult = list(listToSort)
+        return quick_sort_do_algo(listResult, operator, 0, len(listToSort) - 1)
+    else:
+        return[]
+
+
+def quick_sort_partition_function(listToSort, operator, left, right, pivot):
+    """Partitions and sorts the given list according to operator
+    Returns an int
+    This does not split the list, its sorts it according to the pivot
+
+    :param listToSort: The list to sort
+    :type listToSort: :class:`list`
+    :param operator: operator.le for asc, operator.ge for desc
+    :type operator: :class:`operator`
+    :param left: left boundary to partition
+    :type left: :class:`int`
+    :param right: right boundary to partition
+    :type right: :class:`int`
+    :param pivot: the pivot used for comparison
+    :type pivot: :class:`int`
+    """
+    leftPointer = left - 1
+    rightPointer = right
+
+    # Determine which strict operator we are dealing with
+    operatorStrict = general_utilities.determine_strict_operator(operator)
+
+    while True:
+        leftPointer = leftPointer + 1
+        while operatorStrict(listToSort[leftPointer], pivot):
+            # while listToSort[leftPointer] < pivot:
+            leftPointer = leftPointer + 1
+
+        rightPointer = rightPointer - 1
+        while (
+            (rightPointer + 1) > 0 and
+            # listToSort[rightPointer] > pivot
+            operatorStrict(pivot, listToSort[rightPointer])
+        ):
+            rightPointer = rightPointer - 1
+
+        if leftPointer >= rightPointer:
+            break
+        else:
+            general_utilities.swap_list_elements(
+                listToSort, leftPointer, rightPointer)
+
+    general_utilities.swap_list_elements(listToSort, leftPointer, right)
+    return leftPointer
+
+
+def quick_sort_do_algo(listToSort, operator, left, right):
+    """Launches quicksort parition algorithm for both list sides
+    Returns a list
+
+    :param listToSort: The list to sort
+    :type listToSort: :class:`list`
+    :param operator: operator.le for asc, operator.ge for desc
+    :type operator: :class:`operator`
+    :param left: left boundary to partition
+    :type left: :class:`int`
+    :param right: right boundary to partition
+    :type right: :class:`int`
+    """
+    if right - left <= 0:
+        return listToSort
+    else:
+        pivot = listToSort[right]
+        partition = quick_sort_partition_function(
+            listToSort, operator, left, right, pivot)
+        quick_sort_do_algo(listToSort, operator, left, partition - 1)
+        quick_sort_do_algo(listToSort, operator, partition + 1, right)
+
+        return listToSort

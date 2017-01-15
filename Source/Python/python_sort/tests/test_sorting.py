@@ -164,59 +164,59 @@ class TestMergeSort(object):
                                 ), currentOp)
 
 
-# class TestShellSort(object):
-#     parameters = datasets.Parameters()
-#     data = datasets.SortingDataSets()
-#
-#     def test_shellSort_simple_int_list(self):
-#         assert general_utilities.\
-#             is_list_sorted(sorting.shell_sort(
-#                 self.data.simpleMixedIntList1, operator.le
-#                 ), operator.le)
-#
-#         assert general_utilities.\
-#             is_list_sorted(sorting.shell_sort(
-#                 self.data.simpleMixedIntList2, operator.ge
-#                 ), operator.ge)
-#
-#     def test_shellSort_complex_generated_list_asc_desc(self):
-#         for length in range(1, self.parameters.lengthRangeMax):
-#             for minTest in range(self.parameters.minTestRange, 0):
-#                 for maxTest in range(0, self.parameters.maxTestRange):
-#                     for currentOp in [operator.le, operator.ge]:
-#                         currentList = general_utilities.\
-#                             generate_random_int_list(length, minTest, maxTest)
-#                         # Test for each length/minTest/maxTest/currentOp
-#                         assert general_utilities.\
-#                             is_list_sorted(sorting.shell_sort(
-#                                 currentList, currentOp
-#                                 ), currentOp)
-#
-#
-# class TestQuickSort(object):
-#     parameters = datasets.Parameters()
-#     data = datasets.SortingDataSets()
-#
-#     def test_quickSort_simple_int_list(self):
-#         assert general_utilities.\
-#             is_list_sorted(sorting.quick_sort(
-#                 self.data.simpleMixedIntList1, operator.le
-#                 ), operator.le)
-#
-#         assert general_utilities.\
-#             is_list_sorted(sorting.quick_sort(
-#                 self.data.simpleMixedIntList2, operator.ge
-#                 ), operator.ge)
-#
-#     def test_quickSort_complex_generated_list_asc_desc(self):
-#         for length in range(1, self.parameters.lengthRangeMax):
-#             for minTest in range(self.parameters.minTestRange, 0):
-#                 for maxTest in range(0, self.parameters.maxTestRange):
-#                     for currentOp in [operator.le, operator.ge]:
-#                         currentList = general_utilities.\
-#                             generate_random_int_list(length, minTest, maxTest)
-#                         # Test for each length/minTest/maxTest/currentOp
-#                         assert general_utilities.\
-#                             is_list_sorted(sorting.quick_sort(
-#                                 currentList, currentOp
-#                                 ), currentOp)
+class TestShellSort(object):
+    parameters = datasets.Parameters()
+    data = datasets.SortingDataSets()
+
+    def test_shellSort_simple_int_list(self):
+        assert general_utilities.\
+            is_list_sorted(sorting.shell_sort(
+                self.data.simpleMixedIntList1, operator.le
+                ), operator.le)
+
+        assert general_utilities.\
+            is_list_sorted(sorting.shell_sort(
+                self.data.simpleMixedIntList2, operator.ge
+                ), operator.ge)
+
+    def test_shellSort_complex_generated_list_asc_desc(self):
+        for length in range(1, self.parameters.lengthRangeMax):
+            for minTest in range(self.parameters.minTestRange, 0):
+                for maxTest in range(0, self.parameters.maxTestRange):
+                    for currentOp in [operator.le, operator.ge]:
+                        currentList = general_utilities.\
+                            generate_random_int_list(length, minTest, maxTest)
+                        # Test for each length/minTest/maxTest/currentOp
+                        assert general_utilities.\
+                            is_list_sorted(sorting.shell_sort(
+                                currentList, currentOp
+                                ), currentOp)
+
+
+class TestQuickSort(object):
+    parameters = datasets.Parameters()
+    data = datasets.SortingDataSets()
+
+    def test_quickSort_simple_int_list(self):
+        assert general_utilities.\
+            is_list_sorted(sorting.quick_sort(
+                self.data.simpleMixedIntList1, operator.le
+                ), operator.le)
+
+        assert general_utilities.\
+            is_list_sorted(sorting.quick_sort(
+                self.data.simpleMixedIntList2, operator.ge
+                ), operator.ge)
+
+    def test_quickSort_complex_generated_list_asc_desc(self):
+        for length in range(1, self.parameters.lengthRangeMax):
+            for minTest in range(self.parameters.minTestRange, 0):
+                for maxTest in range(0, self.parameters.maxTestRange):
+                    for currentOp in [operator.le, operator.ge]:
+                        currentList = general_utilities.\
+                            generate_random_int_list(length, minTest, maxTest)
+                        # Test for each length/minTest/maxTest/currentOp
+                        assert general_utilities.\
+                            is_list_sorted(sorting.quick_sort(
+                                currentList, currentOp
+                                ), currentOp)

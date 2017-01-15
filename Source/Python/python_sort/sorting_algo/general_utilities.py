@@ -1,6 +1,23 @@
 # -*- coding: utf-8 -*-
 
 import random
+import operator
+
+
+def determine_strict_operator(operatorToTest):
+    """Determines the strict operator associated to the given argument
+    Returns the associated strict operator.
+    Only works with operator.le and operator.ge
+
+    :param operator: operator.le for asc, operator.ge for desc
+    :type operator: :class:`operator`
+    """
+    if operatorToTest == operator.le:
+        return operator.lt
+    elif operatorToTest == operator.ge:
+        return operator.gt
+    else:
+        return operatorToTest
 
 
 def swap_list_elements(listTo, idx1, idx2):

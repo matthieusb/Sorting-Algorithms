@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
-# flake8:noqa: e122
-
 
 import operator
-import pytest
 
 from sorting_algo import general_utilities
 from sorting_algo import datasets
@@ -15,27 +12,28 @@ class TestIsSorted(object):
 
     def test_is_list_sorted_empty(self):
         assert not general_utilities.is_list_sorted(
-        self.data.emptyList, operator.le)
+            self.data.emptyList, operator.le)
 
     def test_is_list_sorted_simple(self):
         assert general_utilities.is_list_sorted(
-        self.data.simpleSortedAscIntList, operator.le)
+            self.data.simpleSortedAscIntList, operator.le)
 
         # Same test with a reversed version of the list
         assert general_utilities.is_list_sorted(
-        self.data.simpleSortedAscIntList[::-1], operator.ge)
+            self.data.simpleSortedAscIntList[::-1], operator.ge)
 
         assert not general_utilities.is_list_sorted(
-        self.data.simpleMixedIntList1, operator.le)
+            self.data.simpleMixedIntList1, operator.le)
 
     def test_is_list_sorted_strings(self):
         assert general_utilities.is_list_sorted(
-        self.data.simpleSortedAscStringList, operator.le
+            self.data.simpleSortedAscStringList, operator.le
         )
 
         assert not general_utilities.is_list_sorted(
-        self.data.simpleMixedStringList, operator.le
+            self.data.simpleMixedStringList, operator.le
         )
+
 
 class TestGenerateRandomList(object):
     parameters = datasets.Parameters()
@@ -43,28 +41,37 @@ class TestGenerateRandomList(object):
 
     def test_is_empty_generated(self):
         assert not general_utilities.generate_random_int_list(0, 0, 0)
-        assert not general_utilities.generate_random_int_list_sorted(0, 0, 0, operator.ge)
+        assert not general_utilities.generate_random_int_list_sorted(
+            0, 0, 0, operator.ge
+        )
 
     # Tests if good length and elements between min and max
     def test_is_correctly_generated(self):
         for length in range(1, self.parameters.lengthRangeMax):
             for minTest in range(self.parameters.minTestRange, 0):
                 for maxTest in range(0, self.parameters.maxTestRange):
-                    resultList = general_utilities.generate_random_int_list(length, minTest, maxTest)
+                    resultList = general_utilities.generate_random_int_list(
+                        length, minTest, maxTest
+                    )
 
                     assert len(resultList) == length
-                    assert all(minTest<=x<=maxTest for x in resultList)
+                    assert all(minTest <= x <= maxTest for x in resultList)
 
     # Same than before + checks if sorted
     def test_is_correctly_generated_sorted(self):
         for length in range(1, self.parameters.lengthRangeMax):
             for minTest in range(self.parameters.minTestRange, 0):
                 for maxTest in range(0, self.parameters.maxTestRange):
-                    resultList = general_utilities.generate_random_int_list_sorted(length, minTest, maxTest, operator.ge)
+                    resultList = general_utilities.\
+                        generate_random_int_list_sorted(
+                            length, minTest, maxTest, operator.ge
+                        )
 
                     assert len(resultList) == length
-                    assert all(minTest<=x<=maxTest for x in resultList)
-                    assert general_utilities.is_list_sorted(resultList, operator.le)
+                    assert all(minTest <= x <= maxTest for x in resultList)
+                    assert general_utilities.is_list_sorted(
+                        resultList, operator.le
+                    )
 
 
 class TestSwapElements(object):
@@ -78,6 +85,25 @@ class TestSwapElements(object):
     def test_incorrect_swap_params(self):
         assert not general_utilities.swap_list_elements([], 0, 1)
 
-        assert not general_utilities.swap_list_elements(self.listToSwap, -1, 10)
+        assert not general_utilities.swap_list_elements(
+            self.listToSwap, -1, 10
+        )
 
         assert not general_utilities.swap_list_elements(self.listToSwap, 1, 10)
+
+
+class TestDetermineStrictOperator(object):
+
+    def test_greaterEquals_returns_greaterThan(self):
+        assert general_utilities.\
+            determine_strict_operator(operator.le) == operator.lt
+
+    def test_lowerEquals_returns_lowerThan(self):
+        assert general_utilities.\
+            determine_strict_operator(operator.ge) == operator.gt
+
+    def test_anyOperator_returns_itself(self):
+        assert general_utilities.\
+            determine_strict_operator(operator.ne) == operator.ne
+        assert general_utilities.\
+            determine_strict_operator(operator.eq) == operator.eq
