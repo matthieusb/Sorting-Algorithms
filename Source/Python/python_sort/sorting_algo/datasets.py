@@ -20,9 +20,9 @@ class SortingDataSets(object):
 
 
 class Parameters(object):
-    lengthRangeMax = 15
-    minTestRange = -15
-    maxTestRange = 15
+    lengthRangeMax = 10
+    minTestRange = -25
+    maxTestRange = 25
 
     def __init__(self):
         pass
