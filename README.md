@@ -1,7 +1,7 @@
 # Sorting-Algorithms
 This repository implements well known sorting algorithms. It's the occasion to practise some basic algorithmic notions and language specificities. This is just for training purposes, as the algorithms are well known and already implemented on most languages. I wanted to develop a simple Python project to practise the basic notions I had already learnt.
 
-Travis CI status :
+
 [![Build Status](https://travis-ci.org/matthieusb/sorting-algorithms-python-java.svg?branch=master)](https://travis-ci.org/matthieusb/sorting-algorithms-python-java)
 
 
