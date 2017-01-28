@@ -40,6 +40,10 @@ URL: <{url}>
         '-V', '--version',
         action='version',
         version='{0} {1}'.format(metadata.project, metadata.version))
+    arg_parser.add_argument(
+        '-a', '--all',
+        action='version'
+    )
 
     arg_parser.parse_args(args=argv[1:])
 
